@@ -21,13 +21,11 @@ jobs:
 
       - name: Install Supabase CLI
         run: |
-          curl -L https://github.com/supabase/cli/releases/latest/download/supabase_linux_amd64.tar.gz -o supabase.tar.gz
-          tar -xzf supabase.tar.gz
-          sudo mv supabase /usr/local/bin/supabase
-          rm supabase.tar.gz
-          rm -f supabase
-          curl -sL https://github.com/supabase/cli/releases/latest/download/supabase_linux_amd64.tar.gz | tar -xz
-          sudo mv -f supabase /usr/local/bin/supabase
+          curl -L https://github.com/supabase/cli/releases/download/v2.39.2/supabase_linux_amd64.tar.gz -o supabase.tar.gz
+          mkdir supabase-cli
+          tar -xzf supabase.tar.gz -C supabase-cli
+          sudo mv supabase-cli/supabase /usr/local/bin/supabase
+          rm -rf supabase-cli supabase.tar.gz
 
       - name: Link to Supabase
         run: supabase link --project-ref etfhkltquzhysvmhbkfg
@@ -45,3 +43,4 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_TEAM_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+
