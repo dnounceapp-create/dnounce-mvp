@@ -1,9 +1,10 @@
+---
 name: Deploy Supabase + Vercel
 
 on:
   push:
     branches:
-      - main
+      - "main"
 
 jobs:
   deploy:
@@ -37,5 +38,3 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_TEAM_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-
-
