@@ -1,0 +1,173 @@
+{
+  "cases": [
+    {
+      "caseId": "EVB001",
+      "type": "evidence",
+      "relationship": "neighbor",
+      "plaintiff": {
+        "firstName": "Sarah",
+        "lastName": "Johnson",
+        "alias": "SarahJ"
+      },
+      "defendant": {
+        "firstName": "Michael",
+        "lastName": "Smith",
+        "email": "michael.smith@email.com",
+        "phone": "(555) 123-4567",
+        "city": "Austin",
+        "state": "TX"
+      },
+      "meta": {
+        "title": "Noise Complaint - Excessive Late Night Music",
+        "summaryOneLine": "Defendant consistently plays loud music past 11 PM despite multiple requests to stop",
+        "createdAt": "2024-01-15T10:30:00Z",
+        "publishedAt": "2024-01-15T14:00:00Z"
+      },
+      "status": {
+        "stage": "EVIDENCE_ARGUMENTS",
+        "label": "Evidence & Arguments",
+        "deadlineUtc": "2024-02-15T23:59:59Z"
+      },
+      "displayNameLine": "Sarah J. vs Michael Smith",
+      "evidence": [
+        {
+          "id": "EVD-001",
+          "filename": "noise_recording_jan_12.mp3",
+          "authenticity": "Authentic"
+        },
+        {
+          "id": "EVD-002",
+          "filename": "text_messages_screenshot.png",
+          "authenticity": "Authentic"
+        }
+      ],
+      "flags": {
+        "followed": true,
+        "pinned": false
+      }
+    },
+    {
+      "caseId": "OPB002",
+      "type": "opinion",
+      "relationship": "coworker",
+      "plaintiff": {
+        "firstName": "David",
+        "lastName": "Chen"
+      },
+      "defendant": {
+        "firstName": "Jennifer",
+        "lastName": "Williams",
+        "email": "j.williams@company.com",
+        "city": "San Francisco",
+        "state": "CA"
+      },
+      "meta": {
+        "title": "Workplace Harassment - Inappropriate Comments",
+        "summaryOneLine": "Defendant made repeated inappropriate comments about appearance and personal life",
+        "createdAt": "2024-01-20T09:15:00Z",
+        "publishedAt": "2024-01-20T16:30:00Z"
+      },
+      "status": {
+        "stage": "PUBLISHED",
+        "label": "Published",
+        "deadlineUtc": null
+      },
+      "displayNameLine": "David Chen vs Jennifer Williams",
+      "evidence": [
+        {
+          "id": "EVD-003",
+          "filename": "witness_statement_1.pdf",
+          "authenticity": "Authentic"
+        },
+        {
+          "id": "EVD-004",
+          "filename": "email_thread.pdf",
+          "authenticity": "Authentic"
+        }
+      ],
+      "flags": {
+        "followed": false,
+        "pinned": true
+      }
+    },
+    {
+      "caseId": "EVB003",
+      "type": "evidence",
+      "relationship": "landlord",
+      "plaintiff": {
+        "firstName": "Maria",
+        "lastName": "Rodriguez"
+      },
+      "defendant": {
+        "firstName": "Robert",
+        "lastName": "Thompson",
+        "email": "rthompson@properties.com",
+        "phone": "(555) 987-6543",
+        "city": "Denver",
+        "state": "CO"
+      },
+      "meta": {
+        "title": "Security Deposit Dispute - Unfair Deductions",
+        "summaryOneLine": "Landlord withheld security deposit for normal wear and tear items",
+        "createdAt": "2024-01-25T14:45:00Z",
+        "publishedAt": "2024-01-25T18:00:00Z"
+      },
+      "status": {
+        "stage": "VERDICT_KEPT",
+        "label": "Case Kept",
+        "deadlineUtc": null
+      },
+      "displayNameLine": "Maria Rodriguez vs Robert Thompson",
+      "evidence": [
+        {
+          "id": "EVD-005",
+          "filename": "move_in_photos.zip",
+          "authenticity": "Authentic"
+        },
+        {
+          "id": "EVD-006",
+          "filename": "move_out_photos.zip",
+          "authenticity": "Authentic"
+        },
+        {
+          "id": "EVD-007",
+          "filename": "lease_agreement.pdf",
+          "authenticity": "Authentic"
+        }
+      ],
+      "flags": {
+        "followed": true,
+        "pinned": false
+      }
+    }
+  ],
+  "defendants": [
+    {
+      "email": "michael.smith@email.com",
+      "phone": "(555) 123-4567",
+      "firstName": "Michael",
+      "lastName": "Smith",
+      "city": "Austin",
+      "state": "TX",
+      "caseIds": ["EVB001"]
+    },
+    {
+      "email": "j.williams@company.com",
+      "phone": "",
+      "firstName": "Jennifer",
+      "lastName": "Williams",
+      "city": "San Francisco",
+      "state": "CA",
+      "caseIds": ["OPB002"]
+    },
+    {
+      "email": "rthompson@properties.com",
+      "phone": "(555) 987-6543",
+      "firstName": "Robert",
+      "lastName": "Thompson",
+      "city": "Denver",
+      "state": "CO",
+      "caseIds": ["EVB003"]
+    }
+  ]
+}
